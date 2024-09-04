@@ -20,9 +20,9 @@ Welcome to the repository for COS30045 - Data Visualisation. This course explore
 
 ## Repository Structure
 
-- `lab_work/` : Contains all lab exercises and practical implementations.
-- `projects/` : Stores the data visualisation project and related resources.
-- `notes/` : Includes all notes, and their documentation.
+- `lab_work/`: Contains all lab exercises and practical implementations.
+- `projects/`: Stores the data visualisation project and related resources.
+- `notes/`: Includes all notes and their documentation.
 
 ## Getting Started
 
@@ -48,7 +48,3 @@ To view or work with any of the files in this repository:
 ## Contributions
 
 This repository reflects my individual work and learning process throughout the course. However, if you have suggestions or improvements, feel free to open an issue or submit a pull request.
-
-## License
-
-This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
