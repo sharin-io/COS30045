@@ -29,7 +29,7 @@ footer p {
     font-size: 0.8em;
     font-family: 'Atkinson Hyperlegible', sans-serif;
     display: inline-block;
-    width: 45%;
+    width: 100%;
 }
 
 footer p:first-child {
