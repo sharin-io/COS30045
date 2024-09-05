@@ -11,15 +11,13 @@ body {
     background: #1E2A5E;
     color: aliceblue;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-size: large'
-
+    font-size: large;
 }
 
 
 /* FOOTER */
 footer {
     /* Used for making the footer */
-    clear: both;
     border-top: 2.5px inset #F5F5F5;
     border-top-style: dotted;
 }
