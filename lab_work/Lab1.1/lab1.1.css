@@ -1,0 +1,45 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 10%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: #1E2A5E;
+    color: aliceblue;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    font-size: large'
+
+}
+
+
+/* FOOTER */
+footer {
+    /* Used for making the footer */
+    clear: both;
+    border-top: 2.5px inset #F5F5F5;
+    border-top-style: dotted;
+}
+
+footer p {
+    text-align: center;
+    font-size: 0.8em;
+    font-family: 'Atkinson Hyperlegible', sans-serif;
+    display: inline-block;
+    width: 45%;
+}
+
+footer p:first-child {
+    text-align: left;
+}
+
+footer p:last-child {
+    text-align: right;
+}
+
+#subject {
+    margin-left: 20px;
+}
