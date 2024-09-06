@@ -12,6 +12,7 @@ body {
     line-height: 1.5;
 }
 
+
 #nav-block {
     display: flex;
     justify-content: right;
@@ -25,18 +26,42 @@ body {
     margin: 5px;
     text-decoration: none;
     color: #F5F5F5;
+    background-color: #1E2A5E;
     box-shadow: #229799 2px 0px 0px;
+    transition: box-shadow .2s, transform .2s;
+}
+
+#nav-block a:hover {
+    background-color: #229799;
+    border: #229799 2px solid;
+    color: #F5F5F5;
+    box-shadow: #F5F5F5 1px 1px 0px;
+    transform: translateY(2px);
+
+
+}
+
+#nav-block a:active {
+    box-shadow: none;
+    transform: translateY(0);
 }
 
 button {
     background-color: #F5F5F5;
     border: none;
-    box-shadow: #229799 1px 0px 0px;
+    box-shadow: #229799 2px 0px 0px;
     color: #1E2A5E;
     border-radius: 5px;
     height: 30px;
     width: 100px;
+    transition: 0.3s;
 }
+
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
 
 
 
