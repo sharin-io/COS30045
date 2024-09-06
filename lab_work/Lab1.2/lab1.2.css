@@ -4,15 +4,24 @@ html {
 
 body {
     height: 100%;
-    padding: 10%;
+    padding: 5%;
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background: #1E2A5E;
     color: aliceblue;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-size: large;
+    line-height: 1.5;
 }
+
+button {
+    background-color: #F5F5F5;
+    border: none;
+    box-shadow: #229799 1px 0px 0px;
+    color: #1E2A5E;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+}
+
 
 
 /* FOOTER */
@@ -28,4 +37,9 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #F5F5F5;
 }

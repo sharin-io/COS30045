@@ -4,16 +4,57 @@ html {
 
 body {
     height: 100%;
-    padding: 10%;
+    padding: 5%;
     margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background: #1E2A5E;
     color: aliceblue;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    font-size: large;
+    line-height: 1.5;
 }
 
+#nav-block {
+    display: inline-block;
+}
+
+#nav-block a {
+    font-weight: bold;
+    border: #F5F5F5 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: #F5F5F5;
+    box-shadow: #229799 2px 0px 0px;
+}
+
+button {
+    background-color: #F5F5F5;
+    border: none;
+    box-shadow: #229799 1px 0px 0px;
+    color: #1E2A5E;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+}
+
+/* Styling for images and figures */
+figure {
+    margin: 20px;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #F5F5F5;
+    margin-top: 10px;
+    text-align: center;
+}
 
 /* FOOTER */
 footer {
@@ -28,4 +69,9 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #F5F5F5;
 }

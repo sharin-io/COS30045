@@ -4,7 +4,7 @@ html {
 
 body {
     height: 100%;
-    padding: 10%;
+    padding: 7%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -15,22 +15,6 @@ body {
 
 }
 
-h1 {
-    text-shadow:
-        #424242 1px 0px 0px;
-    margin-bottom: 3.5%;
-}
-
-button {
-    background-color: #F5F5F5;
-    border: none;
-    box-shadow: #229799 1px 0px 0px;
-    ;
-    color: #1E2A5E;
-    border-radius: 5px;
-    height: 30px;
-    width: 100px;
-}
 
 a {
     color: inherit;
