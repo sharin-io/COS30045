@@ -57,7 +57,7 @@ var dir = ['1.1', '1.2', '1.3', '2.1', '2.2', '2.3', '2.4', '3.1', '3.2', '5.1',
 
 for (var i = 0; i < dir.length; i++) {
 
-    var url = "https://j-frances.github.io/COS30045-Data-Visualisation/Lab%20" + dir[i] + "/lab" + dir[i] + ".html";
+    var url = "https://github.com/sharin-io/COS30045/blob/b3fecf00cb06297af6ba6a1b58144ae75172b3e8/lab_work/Lab%20" + dir[i] + "/lab" + dir[i] + ".html";
 
     var link = document.createElement("a");
     link.setAttribute("href", url);
