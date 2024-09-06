@@ -13,7 +13,8 @@ body {
 }
 
 #nav-block {
-    display: inline-block;
+    display: flex;
+    justify-content: right;
 }
 
 #nav-block a {
@@ -38,6 +39,16 @@ button {
 }
 
 /* Styling for images and figures */
+.gallery {
+    display: flex;
+}
+
+.gallery img {
+    border-radius: 10px;
+    border: #F5F5F5 2px solid;
+    width: 80%;
+}
+
 figure {
     margin: 20px;
     text-align: center;
@@ -56,6 +67,10 @@ figcaption {
     text-align: center;
 }
 
+#caption_chart a {
+    color: #F5F5F5;
+}
+
 /* FOOTER */
 footer {
     /* Used for making the footer */
@@ -71,7 +86,7 @@ footer {
     width: 100%;
 }
 
-a {
+footer a {
     text-decoration: none;
     color: #F5F5F5;
 }

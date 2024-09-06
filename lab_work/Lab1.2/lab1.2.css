@@ -12,6 +12,22 @@ body {
     line-height: 1.5;
 }
 
+#nav-block {
+    display: flex;
+    justify-content: right;
+}
+
+#nav-block a {
+    font-weight: bold;
+    border: #F5F5F5 2px solid;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: #F5F5F5;
+    box-shadow: #229799 2px 0px 0px;
+}
+
 button {
     background-color: #F5F5F5;
     border: none;
