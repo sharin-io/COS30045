@@ -34,7 +34,7 @@ To view or work with any of the files in this repository:
     ```
 2. **Navigate to the relevant directory**:
     ```bash
-    cd COS30045-Data-Visualisation/lab_work/
+    cd COS30045/lab_work/
     ```
 3. **Open the files in your preferred editor**.
 
