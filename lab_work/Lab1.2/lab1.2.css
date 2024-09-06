@@ -22,22 +22,10 @@ footer {
     border-top-style: dotted;
 }
 
-footer p {
-    text-align: center;
+footer {
     font-size: 0.8em;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-}
-
-footer p:first-child {
-    text-align: left;
-}
-
-footer p:last-child {
-    text-align: right;
-}
-
-#subject {
-    margin-left: 20px;
 }

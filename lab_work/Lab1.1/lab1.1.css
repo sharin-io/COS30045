@@ -22,9 +22,10 @@ footer {
     border-top-style: dotted;
 }
 
-footer p {
-    text-align: center;
+footer {
     font-size: 0.8em;
     font-family: 'Atkinson Hyperlegible', sans-serif;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
 }
