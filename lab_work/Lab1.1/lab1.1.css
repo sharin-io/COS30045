@@ -26,18 +26,5 @@ footer p {
     text-align: center;
     font-size: 0.8em;
     font-family: 'Atkinson Hyperlegible', sans-serif;
-    display: inline-block;
     width: 100%;
-}
-
-footer p:first-child {
-    text-align: left;
-}
-
-footer p:last-child {
-    text-align: right;
-}
-
-#subject {
-    margin-left: 20px;
 }
