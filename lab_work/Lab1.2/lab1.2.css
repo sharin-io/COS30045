@@ -62,8 +62,25 @@ button:active {
     transform: translateY(0);
 }
 
+figure {
+    margin: 20px;
+    text-align: center;
+}
 
+figure img {
+    max-width: 100%;
+    height: auto;
 
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: #F5F5F5;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#ChartImg
 
 /* FOOTER */
 footer {
