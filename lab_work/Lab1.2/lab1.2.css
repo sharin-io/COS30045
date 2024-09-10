@@ -82,20 +82,17 @@ figcaption {
 
 /* FOOTER */
 footer {
-    /* Used for making the footer */
-    border-top: 2.5px inset #F5F5F5;
-    border-top-style: dotted;
-}
-
-footer {
+    border-top: 2.5px dotted #F5F5F5;
     font-size: 0.8em;
     font-family: 'Atkinson Hyperlegible', sans-serif;
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 10px 0;
+    /* Added padding to give space around content */
 }
 
-a {
+footer a {
     text-decoration: none;
     color: #F5F5F5;
 }
