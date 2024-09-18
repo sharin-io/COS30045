@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>LAB 2.1 D3 Drawing with Data - Binding</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="LAB 2.1 D3 Drawing with Data - Binding" />
+    <meta name="author" content="SHIN THANT THI RI">
+    <meta name="keywords" content="D3, JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="lab2.1.css">
+</head>
+
+<body>
+    <!-- Navigation Menu -->
+    <nav id="nav-block">
+        <a href="../Lab2.1/lab2.1.html">Lab 2.1</a>
+        <a href="../Lab2.2/lab2.2.html">Lab 2.2</a>
+        <a href="../Lab2.3/lab2.3.html">Lab 2.3</a>
+        <a href="../Lab2.4/lab2.4.html">Lab 2.4</a>
+    </nav>
+
+    <!-- Heading Level -->
+    <h1>The D3 Journey starts <here class=""></here></a></h1>
+    <h2>Author: Shin Thant Thi Ri </h2>
+
+    <script>
+        var dataset = [14, 5, 26, 3, 9];
+        d3.select("body").selectAll("p")
+            .dataset(dataset)
+            .enter()
+            .append("p")
+            .text(function (d) {
+                return d;
+            });
+    </script>
+
+    <!-- Footer -->
+    <footer>
+        <p>COS30045 Data Visualization</p>
+        <p>Authored by SHIN THANT THI RI | <a
+                href="mailto:104842811@student.swin.edu.au">104842811@student.swin.edu.au</a>
+        </p>
+    </footer>
+</body>
+
+</html>
