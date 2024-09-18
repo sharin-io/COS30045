@@ -9,8 +9,10 @@
     <meta name="keywords" content="D3, JavaScript" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <script src="https://d3js.org/d3.v7.min.js"></script>
     <link rel="stylesheet" href="lab2.1.css">
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="lab2.1.js"></script>
 </head>
 
 <body>
@@ -25,17 +27,6 @@
     <!-- Heading Level -->
     <h1>The D3 Journey starts <here class=""></here></a></h1>
     <h2>Author: Shin Thant Thi Ri </h2>
-
-    <script>
-        var dataset = [14, 5, 26, 3, 9];
-        d3.select("body").selectAll("p")
-            .dataset(dataset)
-            .enter()
-            .append("p")
-            .text(function (d) {
-                return d;
-            });
-    </script>
 
     <!-- Footer -->
     <footer>
