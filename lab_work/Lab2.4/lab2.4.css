@@ -14,8 +14,15 @@ body {
 
 #nav-block {
     display: flex;
-    justify-content: right;
+    justify-content: flex-end;
+    /* Keep other links on the right */
 }
+
+#menu {
+    margin-right: auto;
+    /* Pushes Menu link to the left */
+}
+
 
 #nav-block a {
     font-weight: bold;
@@ -42,40 +49,6 @@ body {
 #nav-block a:active {
     box-shadow: none;
     transform: translateY(0);
-}
-
-
-/* Styling for images and figures */
-.gallery {
-    display: flex;
-}
-
-.gallery img {
-    border-radius: 10px;
-    border: #F5F5F5 2px solid;
-    width: 80%;
-}
-
-figure {
-    margin: 20px;
-    text-align: center;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-
-}
-
-figcaption {
-    font-size: 0.9em;
-    color: #F5F5F5;
-    margin-top: 10px;
-    text-align: center;
-}
-
-#caption_chart a {
-    color: #F5F5F5;
 }
 
 /* FOOTER */
