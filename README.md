@@ -1,5 +1,6 @@
 # COS30045 - Data Visualisation
-Welcome to the repository for COS30045 - Data Visualisation. This course explores the foundational principles of information visualization and good design practices. Throughout this unit, we will delve into the various types of information graphics and visual representations, learning how to effectively communicate data through visual means.
+
+Welcome to the repository for COS30045 - Data Visualisation. This course explores the foundational principles of information visualization and good design practices. Throughout this unit, we will delve into the various types of information graphics and visual representations, learning how to communicate data through visual means effectively.
 
 ## Course Overview
 
@@ -11,8 +12,8 @@ Welcome to the repository for COS30045 - Data Visualisation. This course explore
 - **Visualisation Critique**: Developing skills to evaluate and improve visualizations.
 - **Analysis of User Tasks in Visualisation Usage**: Understanding user interactions and tasks in the context of visual data.
 - **Data Sets and Types**: Identifying different data types and how they influence visualization techniques.
-- **Interaction: Manipulating View, Filtering**: Learning how to enhance user experience with interactive visualizations.
-- **Arranging Tables, Graphs, and Maps**: Effective layout strategies for various types of data presentations.
+- **Interaction: Manipulating View, Filtering**: Learning to enhance user experience with interactive visualizations.
+- **Arranging Tables, Graphs, and Maps**: Effective layout strategies for various data presentations.
 - **Colour Theory**: Exploring the use of color in visual communication.
 - **Human Perception and Cognition**: Understanding how humans perceive and interpret visual data.
 - **User Research**: Conducting research to inform visualization design choices.
@@ -24,9 +25,12 @@ You can view the project live at [http://sharin.me/COS30045/](http://sharin.me/C
 
 ## Repository Structure
 
-- `lab_work/`: Contains all lab exercises and practical implementations.
-- `projects/`: Stores the data visualisation project and related resources.
-- `docs/`: Contains the main HTML files and styles for the project (e.g., `index.html`, `menu.css`).
+* `docs/`: Contains the main files for the project
+    - `index.html`: The main HTML file for the project
+    - `index.css`: The main CSS file for styling the project
+    - `lab_work/`: Contains all lab exercises and practical implementations
+    - `projects/`: Stores the data visualisation project and related resources
+* `README.md`: This file provides an overview of the repository
 
 ## Getting Started
 
