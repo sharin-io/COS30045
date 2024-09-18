@@ -16,6 +16,7 @@ body {
 
 .container {
     flex: 1;
+    /* This ensures the container takes up available space */
     text-align: center;
     padding: 5%;
 }
@@ -36,6 +37,9 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 .card {
@@ -43,7 +47,7 @@ h2 {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 15px;
-    width: calc(25% - 20px);
+    width: calc(25% - 15px);
     min-width: 200px;
     max-width: 250px;
     text-align: center;
@@ -51,11 +55,9 @@ h2 {
 }
 
 .card img {
-    width: 100%;
-    height: auto;
+    width: 200px;
+    height: 150px;
     border-radius: 10px;
-    object-fit: cover;
-    aspect-ratio: 4/3;
 }
 
 .card h3 {
@@ -63,7 +65,8 @@ h2 {
     color: #F5F5F5;
 }
 
-.card button {
+.button {
+    display: inline-block;
     background-color: #007BFF;
     color: white;
     padding: 10px 20px;
@@ -71,11 +74,13 @@ h2 {
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Atkinson Hyperlegible', sans-serif;
+    text-decoration: none;
 }
 
-.card button:hover {
+.button:hover {
     background-color: #0056b3;
 }
+
 
 /* FOOTER */
 footer {
@@ -88,22 +93,4 @@ footer {
     padding: 10px 0;
     position: relative;
     bottom: 0;
-}
-
-@media (max-width: 1200px) {
-    .card {
-        width: calc(33.33% - 20px);
-    }
-}
-
-@media (max-width: 900px) {
-    .card {
-        width: calc(50% - 20px);
-    }
-}
-
-@media (max-width: 600px) {
-    .card {
-        width: 100%;
-    }
 }
