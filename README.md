@@ -18,11 +18,15 @@ Welcome to the repository for COS30045 - Data Visualisation. This course explore
 - **User Research**: Conducting research to inform visualization design choices.
 - **Introduction to Data-Driven Documents (D3)**: Learning the basics of D3.js for creating dynamic and interactive data visualizations.
 
+## Live Site
+
+You can view the project live at [http://sharin.me/COS30045/](http://sharin.me/COS30045/).
+
 ## Repository Structure
 
 - `lab_work/`: Contains all lab exercises and practical implementations.
 - `projects/`: Stores the data visualisation project and related resources.
-- `notes/`: Includes all notes and their documentation.
+- `docs/`: Contains the main HTML files and styles for the project (e.g., `menu.html`, `menu.css`).
 
 ## Getting Started
 
@@ -32,11 +36,15 @@ To view or work with any of the files in this repository:
     ```bash
     git clone https://github.com/your-username/COS30045-Data-Visualisation.git
     ```
-2. **Navigate to the relevant directory**:
+2. **Navigate to the repository**:
     ```bash
-    cd COS30045/lab_work/
+    cd COS30045-Data-Visualisation
     ```
-3. **Open the files in your preferred editor**.
+3. **Open the `docs` directory**:
+    ```bash
+    cd docs/
+    ```
+4. **Open `menu.html` in your web browser** to view the project.
 
 ## Tools & Technologies
 
@@ -44,6 +52,7 @@ To view or work with any of the files in this repository:
 - **Python/Matplotlib**: For basic data visualization tasks.
 - **Tableau**: For advanced data analysis and visualization.
 - **Jupyter Notebooks**: For exploratory data analysis and visualization.
+- **HTML/CSS**: For structuring and styling the web content.
 
 ## Contributions
 
