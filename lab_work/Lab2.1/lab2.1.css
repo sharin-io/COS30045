@@ -14,7 +14,13 @@ body {
 
 #nav-block {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
+    /* Change this to space-between */
+}
+
+#menu {
+    margin-left: 0;
+    /* Ensure there's no margin on the left */
 }
 
 #nav-block a {
@@ -29,7 +35,6 @@ body {
     box-shadow: #229799 2px 0px 0px;
     transition: box-shadow .2s, transform .2s;
 }
-
 
 #nav-block a:hover {
     background-color: #229799;
@@ -46,37 +51,6 @@ body {
 
 
 /* Styling for images and figures */
-.gallery {
-    display: flex;
-}
-
-.gallery img {
-    border-radius: 10px;
-    border: #F5F5F5 2px solid;
-    width: 80%;
-}
-
-figure {
-    margin: 20px;
-    text-align: center;
-}
-
-figure img {
-    max-width: 100%;
-    height: auto;
-
-}
-
-figcaption {
-    font-size: 0.9em;
-    color: #F5F5F5;
-    margin-top: 10px;
-    text-align: center;
-}
-
-#caption_chart a {
-    color: #F5F5F5;
-}
 
 /* FOOTER */
 footer {
