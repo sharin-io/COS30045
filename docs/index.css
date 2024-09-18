@@ -6,6 +6,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 5%;
+    padding-top: 0;
     background: #1E2A5E;
     color: aliceblue;
     font-family: 'Atkinson Hyperlegible', sans-serif;
@@ -93,4 +94,9 @@ footer {
     padding: 10px 0;
     position: relative;
     bottom: 0;
+}
+
+footer a {
+    text-decoration: none;
+    color: #F5F5F5;
 }

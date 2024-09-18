@@ -5,6 +5,7 @@ html {
 body {
     height: 100%;
     padding: 5%;
+    padding-top: 0;
     margin: 0;
     background: #1E2A5E;
     color: aliceblue;
@@ -16,11 +17,6 @@ body {
     display: flex;
     justify-content: flex-end;
     /* Keep other links on the right */
-}
-
-#menu {
-    margin-right: auto;
-    /* Pushes Menu link to the left */
 }
 
 
