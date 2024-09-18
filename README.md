@@ -46,4 +46,14 @@ To view or work with any of the files in this repository:
     ```
 4. **Open `index.html` in your web browser** to view the project.
 
-## Tools & Tech
+## Tools & Technologies
+
+- **D3.js**: For creating data-driven visualizations.
+- **Python/Matplotlib**: For basic data visualization tasks.
+- **Tableau**: For advanced data analysis and visualization.
+- **Jupyter Notebooks**: For exploratory data analysis and visualization.
+- **HTML/CSS**: For structuring and styling the web content.
+
+## Contributions
+
+This repository reflects my individual work and learning process throughout the course. However, if you have suggestions or improvements, feel free to open an issue or submit a pull request.
