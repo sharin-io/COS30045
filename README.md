@@ -20,13 +20,13 @@ Welcome to the repository for COS30045 - Data Visualisation. This course explore
 
 ## Live Site
 
-You can view the project live at [http://sharin.me/COS30045/](http://sharin.me/COS30045/).
+You can view the project live at [http://sharin.me/COS30045/](http://sharin.me/COS30045/) (main page).
 
 ## Repository Structure
 
 - `lab_work/`: Contains all lab exercises and practical implementations.
 - `projects/`: Stores the data visualisation project and related resources.
-- `docs/`: Contains the main HTML files and styles for the project (e.g., `menu.html`, `menu.css`).
+- `docs/`: Contains the main HTML files and styles for the project (e.g., `index.html`, `menu.css`).
 
 ## Getting Started
 
@@ -44,16 +44,6 @@ To view or work with any of the files in this repository:
     ```bash
     cd docs/
     ```
-4. **Open `menu.html` in your web browser** to view the project.
+4. **Open `index.html` in your web browser** to view the project.
 
-## Tools & Technologies
-
-- **D3.js**: For creating data-driven visualizations.
-- **Python/Matplotlib**: For basic data visualization tasks.
-- **Tableau**: For advanced data analysis and visualization.
-- **Jupyter Notebooks**: For exploratory data analysis and visualization.
-- **HTML/CSS**: For structuring and styling the web content.
-
-## Contributions
-
-This repository reflects my individual work and learning process throughout the course. However, if you have suggestions or improvements, feel free to open an issue or submit a pull request.
+## Tools & Tech
