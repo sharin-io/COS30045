@@ -26,8 +26,26 @@
     </nav>
 
     <!-- Heading Level -->
-    <h1>The D3 Journey starts <here class=""></here></a></h1>
+    <h1>Creating and Formatting Paragraph Elements with D3<here class=""></here></a></h1>
     <h2>Author: Shin Thant Thi Ri </h2>
+
+    <script>
+        var dataset = [14, 5, 26, 23, 9];
+
+        d3.select("body").selectAll("p")
+            .data(dataset)
+            .enter()
+            .append("p")
+            .style("color", function (d) { return d > 10 ? "red" : "white" })
+            .text(function (d) {
+                searchResult = "Joe watched " + d + " cat videos today.";
+                if (d > 10) {
+                    return "Warning: " + searchResult;
+                } else {
+                    return searchResult;
+                }
+            });
+    </script>
 
     <!-- Footer -->
     <footer>
