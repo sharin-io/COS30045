@@ -26,14 +26,14 @@
     <!-- Heading Level -->
     <h1>LAB 2.2 D3 Drawing with Data - Bar Chart</a></h1>
     <h2>Author: Shin Thant Thi Ri </h2>
-
+    <p>Demo Question: Modifying the text labels to display just below each bar.</p>
     <script>
-        var w = 660;
-        var h = 200;
+        var w = 650;
+        var h = 300;
 
-        var padding = 10;
-        var dataset = [14, 5, 26, 23, 9, 29, 3, 35, 19];
-        var label = 5;
+        var padding = 2;
+        var dataset = [14, 5, 26, 23, 9, 29, 7, 35, 19];
+        var label = 3;
 
         var svg = d3.select("body")
             .append("svg")
@@ -45,16 +45,10 @@
             .data(dataset)
             .enter()
             .append("rect")
-            .attr("x", function (d, i) {
-                return i * (w / dataset.length) + padding;
-            })
-            .attr("y", function (d) {
-                return 100 + (100 - (d * 4));
-            })
-            .attr("width", (w / dataset.length) - padding)
-            .attr("height", function (d) {
-                return d * 4;
-            })
+            .attr("x", function (d, i) { return i * (w / dataset.length); })
+            .attr("y", function (d) { return h - (d * 4) })
+            .attr("width", function (d) { return (w / dataset.length - padding); })
+            .attr("height", function (d) { return (d * 4) })
             .style("fill", d3.color("brown"));
 
         svg.selectAll("text")
@@ -63,9 +57,8 @@
             .append("text")
             .text(function (d) { return d; })
             .attr("fill", "black")
-            .attr("x", function (d, i) { return i * (w / dataset.length) + 35; })
-            //return h - (d * 4.3)
-            .attr("y", function (d) { return h - (d * 4.5) });
+            .attr("x", function (d, i) { return i * (w / dataset.length) + 23 })
+            .attr("y", function (d) { return h - (d * 4) + 16 });
     </script>
 
     <p id="chart"></p>
