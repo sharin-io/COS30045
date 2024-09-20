@@ -1,63 +1,60 @@
-/*
-    We define some values to be used for the svg element
-    and the columns of the bar chart here so that they can
-    be edited more easily if we want to change the appearance
-    of the graph in the future.
-*/
-var w = 1000;
-var h = 500;
-var padding = 10;
+function init() {
+    //reading the data from csv file
+    d3.csv("Task_2.4.csv").then(function (data) {
+        console.log(data);
+        pets19 = data;
 
+        barChart(pets19);
+    })
 
-/*
-    Bar chart used to represent the CSV data. For each rectangle we define:
-        - X attribute spaces the columns along the x axis.
-        - Y attribute moves the origin of each column relative to 0,0 (top left of the svg).
-        - Height attribute determined by the CSV data, scaled times 4 for readability.
-        - Width attribute is scaled so that all columns are equal and include spacing.
-*/
-function barChart(data) {
-    svg.selectAll("rect")
-        .data(data)
-        .enter()
-        .append("rect")
-        .attr("x", function (d, i) {
-            return i * (w / data.length);
-        })
-        .attr("y", function (d) {
-            return h - (d.wombats * 4);
-        })
-        .attr("width", (w / data.length) - padding)
-        .attr("height", function (d) {
-            return d.wombats * 4;
-        })
-        .style("fill", function (d) {
-            if (d.wombats < 10) {
-                return d3.color("blue");
-            } else {
-                return d3.color("darkblue");
-            }
-        });
+    var w = 500;
+    var h = 150;
+    var barPadding = 3;
+
+    //D3 block
+    var svg = d3.select("#chart")
+        .append("svg")
+        .attr("width", w)
+        .attr("height", h);
+
+    function barChart(pets19) {
+        svg.selectAll("rect")
+            .data(pets19)
+            .enter()
+            .append("rect")
+            //x coordinate and y coordinate
+            .attr("x", function (d, i) {
+                return i * (w / pets19.length);
+            })
+            .attr("y", function (d) {
+                return h - (d.Quantity * 4)
+            })
+            //width and height of the bar chart
+            .attr("width", function (d) {
+                return (w / pets19.length - barPadding);
+            })
+            .attr("height", function (d) {
+                return d.Quantity * 4;
+            })
+            //colour of the bar changes depending on the value of the data
+            .attr("fill", function (d) {
+                return "rgb(135,206, " + (d.Quantity * 8) + ")";
+            });
+
+        svg.selectAll("text")
+            .data(pets19)
+            .enter()
+            .append("text")
+            .text(function (d) {
+                return d.Quantity;
+            })
+            .attr("fill", "black")
+            .attr("x", function (d, i) {
+                return i * (w / pets19.length) + 10.5;
+            })
+            .attr("y", function (d) {
+                return h - (d.Quantity * 4)
+            })
+    }
 }
-
-/*
-    We load the csv data and save it to a variable "wombatSightings".
-    We pass this variable to the barChart function to generate the graph.
-*/
-d3.csv("res/Task_2.4_data.csv").then(function (data) {
-    console.log(data);
-    wombatSightings = data;
-    barChart(wombatSightings);
-});
-
-
-/*
-    We set up the svg canvas according to predefined width and height
-    The svg is appended to a paragraph element so that we can control 
-    where it renders on the page.
-*/
-var svg = d3.select("p")
-    .append("svg")
-    .attr("width", w)
-    .attr("height", h)
-    .style("outline", "solid thin skyblue");
+window.onload = init;
