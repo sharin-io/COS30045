@@ -1,6 +1,6 @@
 // Set the dimensions and margins of the graph
-var w = 800;
-var h = 800;
+var w = 700;
+var h = 600;
 var padding = 50;
 
 // Define initial dataset

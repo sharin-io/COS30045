@@ -1,6 +1,6 @@
 // Set the width and height of the SVG
-var w = 800;
-var h = 800;
+var w = 700;
+var h = 600;
 
 // Set padding to create margins
 var padding = 100;
