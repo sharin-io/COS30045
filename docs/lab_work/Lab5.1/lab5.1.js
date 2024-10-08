@@ -58,7 +58,7 @@ function updateBars(data) {
         .attr("y", function (d) { return yScale(d); })
         .attr("width", xScale.bandwidth())
         .attr("height", function (d) { return h - yScale(d); })
-        .style("fill", d3.color("brown"));
+        .attr("fill", "brown");
 
     // Remove old bars
     bars.exit().remove();
