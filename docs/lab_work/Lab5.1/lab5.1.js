@@ -1,10 +1,13 @@
 // Set the dimensions and margins of the graph
-var w = 500;
-var h = 400;
+var w = 600;
+var h = 600;
 var padding = 50;
 
 // Define initial dataset
 var dataset = [14, 5, 26, 23, 9, 29, 7, 35, 19];
+
+// Set the maximum value for data generation
+var maxValue = 25;
 
 // Create scales
 var xScale = d3.scaleBand()
@@ -110,6 +113,6 @@ function generateDataset(numValues, maxValue) {
 
 // D3 event handler for the button
 d3.select("button").on("click", function () {
-    var newDataset = generateDataset(dataset.length, 50);
+    var newDataset = generateDataset(dataset.length, maxValue);
     updateBars(newDataset);
 });
