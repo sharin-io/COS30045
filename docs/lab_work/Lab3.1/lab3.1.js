@@ -1,5 +1,5 @@
-var w = 1000;
-var h = 1000;
+var w = 500;
+var h = 600;
 var padding = 100;
 
 var dataset = [
@@ -55,7 +55,7 @@ svg.selectAll("circle")
         if (d[0] == 250) {
             return "red";
         } else {
-            return "slategrey";
+            return "yellow";
         }
     });
 
