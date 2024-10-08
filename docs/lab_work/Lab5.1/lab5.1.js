@@ -4,7 +4,7 @@ var w = 500;
 var h = 250;
 
 // Define dataset
-var dataset = generateDataset(12, 25);
+var dataset = [14, 5, 26, 23, 9, 29, 7, 35, 19];
 
 // Create scales
 var xScale = d3.scaleBand()
@@ -58,7 +58,7 @@ function updateBars(data) {
         .attr("y", function (d) { return yScale(d); })
         .attr("width", xScale.bandwidth())
         .attr("height", function (d) { return h - yScale(d); })
-        .attr("fill", "green");
+        .style("fill", d3.color("brown"));
 
     // Remove old bars
     bars.exit().remove();
