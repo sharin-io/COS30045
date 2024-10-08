@@ -26,12 +26,14 @@ var svg = d3.select("#chart")
 // Create x-axis
 var xAxis = d3.axisBottom(xScale);
 svg.append("g")
+    .attr("class", "x-axis")
     .attr("transform", "translate(0," + (h - padding) + ")")
     .call(xAxis);
 
 // Create y-axis
 var yAxis = d3.axisLeft(yScale);
 svg.append("g")
+    .attr("class", "y-axis")
     .attr("transform", "translate(" + padding + ",0)")
     .call(yAxis);
 
@@ -42,8 +44,7 @@ svg.append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", padding / 2)
     .attr("x", -(h / 2))
-    .text("Value")
-
+    .text("Value");
 
 // Function to update the bars on the chart
 function updateBars(data) {
@@ -99,7 +100,12 @@ updateBars(dataset);
 
 // Function to generate a new dataset
 function generateDataset(numValues, maxValue) {
-    return Array.from({ length: numValues }, () => Math.floor(Math.random() * maxValue) + 1);
+    var data = [];
+    for (var i = 0; i < numValues; i++) {
+        var newNumber = Math.floor(Math.random() * maxValue);
+        data.push(newNumber);
+    }
+    return data;
 }
 
 // D3 event handler for the button

@@ -37,7 +37,7 @@ var svg = d3.select("body")
     .append("svg")
     .attr("width", w)
     .attr("height", h)
-    .style("outline", "solid thin skyblue");
+    .style("outline", "solid thin black");
 
 // Create circles
 svg.selectAll("circle")
