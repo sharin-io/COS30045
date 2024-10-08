@@ -76,17 +76,22 @@ svg.selectAll("text")
 // Add x-axis
 svg.append("g")
     .attr("transform", "translate(0," + (h - padding) + ")")
-    .call(xAxis);
+    .call(xAxis)
+    .selectAll("text")
+    .style("fill", "white");
 
 // Add y-axis
 svg.append("g")
     .attr("transform", "translate(" + padding + ",0)")
-    .call(yAxis);
+    .call(yAxis)
+    .selectAll("text")
+    .style("fill", "white");
 
 // Add x-axis label
 svg.append("text")
     .attr("transform", "translate(" + (w / 2) + " ," + (h - padding / 3) + ")")
     .style("text-anchor", "middle")
+    .style("fill", "white")
     .text("X-axis");
 
 // Add y-axis label
@@ -96,4 +101,5 @@ svg.append("text")
     .attr("x", 0 - (h / 2))
     .attr("dy", "1em")
     .style("text-anchor", "middle")
+    .style("fill", "white")
     .text("Y-axis");
