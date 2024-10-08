@@ -1,51 +1,64 @@
-
 // Set the dimensions and margins of the graph
 var w = 500;
-var h = 250;
+var h = 400;
+var padding = 50;
 
-// Define dataset
+// Define initial dataset
 var dataset = [14, 5, 26, 23, 9, 29, 7, 35, 19];
 
 // Create scales
 var xScale = d3.scaleBand()
     .domain(d3.range(dataset.length))
-    .rangeRound([0, w])
+    .range([padding, w - padding])
     .paddingInner(0.05);
 
 var yScale = d3.scaleLinear()
     .domain([0, d3.max(dataset)])
-    .range([h, 0]);
+    .range([h - padding, padding]);
 
-// Create an svg element inside the chart container and set its dimension
-var svg1 = d3.select("#chart")
+// Create SVG element
+var svg = d3.select("#chart")
     .append("svg")
     .attr("width", w)
-    .attr("height", h);
+    .attr("height", h)
+    .style("background-color", d3.color("skyblue"));
 
-// Bind data and create bars
-updateBars(dataset);
+// Create x-axis
+var xAxis = d3.axisBottom(xScale);
+svg.append("g")
+    .attr("transform", "translate(0," + (h - padding) + ")")
+    .call(xAxis);
 
-// D3 event handler for the button
-d3.select("button").on("click", function () {
-    dataset = generateDataset(dataset.length, 25);
-    yScale.domain([0, d3.max(dataset)]);
-    updateBars(dataset);
-});
+// Create y-axis
+var yAxis = d3.axisLeft(yScale);
+svg.append("g")
+    .attr("transform", "translate(" + padding + ",0)")
+    .call(yAxis);
 
-// Function to generate a new dataset
-function generateDataset(numValues, maxValue) {
-    var data = [];
-    for (var i = 0; i < numValues; i++) {
-        var newNumber = Math.floor(Math.random() * maxValue);
-        data.push(newNumber);
-    }
-    return data;
-}
+// Add y-axis label
+svg.append("text")
+    .attr("class", "y-label")
+    .attr("text-anchor", "middle")
+    .attr("transform", "rotate(-90)")
+    .attr("y", padding / 2)
+    .attr("x", -(h / 2))
+    .text("Value")
+
 
 // Function to update the bars on the chart
 function updateBars(data) {
+    // Update scales
+    xScale.domain(d3.range(data.length));
+    yScale.domain([0, d3.max(data)]);
+
+    // Update x-axis
+    svg.select(".x-axis").transition().duration(500).call(xAxis);
+
+    // Update y-axis
+    svg.select(".y-axis").transition().duration(500).call(yAxis);
+
     // Join new data
-    var bars = svg1.selectAll("rect")
+    var bars = svg.selectAll("rect")
         .data(data);
 
     // Update bars
@@ -57,9 +70,40 @@ function updateBars(data) {
         .attr("x", function (d, i) { return xScale(i); })
         .attr("y", function (d) { return yScale(d); })
         .attr("width", xScale.bandwidth())
-        .attr("height", function (d) { return h - yScale(d); })
+        .attr("height", function (d) { return h - padding - yScale(d); })
         .attr("fill", "brown");
 
     // Remove old bars
     bars.exit().remove();
+
+    // Update text labels
+    var labels = svg.selectAll(".bar-label")
+        .data(data);
+
+    labels.enter()
+        .append("text")
+        .attr("class", "bar-label")
+        .merge(labels)
+        .transition()
+        .duration(500)
+        .attr("x", function (d, i) { return xScale(i) + xScale.bandwidth() / 2; })
+        .attr("y", function (d) { return yScale(d) - 5; })
+        .attr("text-anchor", "middle")
+        .text(function (d) { return d; });
+
+    labels.exit().remove();
 }
+
+// Initial chart creation
+updateBars(dataset);
+
+// Function to generate a new dataset
+function generateDataset(numValues, maxValue) {
+    return Array.from({ length: numValues }, () => Math.floor(Math.random() * maxValue) + 1);
+}
+
+// D3 event handler for the button
+d3.select("button").on("click", function () {
+    var newDataset = generateDataset(dataset.length, 50);
+    updateBars(newDataset);
+});
