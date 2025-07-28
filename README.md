@@ -21,7 +21,7 @@ Welcome to the repository for COS30045 - Data Visualisation. This course explore
 
 ## Live Site
 
-You can view the project live at [http://sharin.me/COS30045/](http://sharin.me/COS30045/) (main page).
+You can view the project live at [https://sharin-io.github.io/COS30045/](https://sharin-io.github.io/COS30045/) (main page).
 
 ## Repository Structure
 
